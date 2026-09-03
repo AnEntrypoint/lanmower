@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>lanmower</title>
+<meta name="description" content="lanmower / AnEntrypoint. Distributed systems, multi-agent tooling, the Hyperswarm stack. Mostly JavaScript and TypeScript, some Rust, occasional C++." />
+<meta name="theme-color" content="#0f1115" />
+<meta property="og:title" content="lanmower" />
+<meta property="og:description" content="Distributed systems, P2P, Hyperswarm. A lot of repos." />
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/657315?v=4" />
+<meta property="og:url" content="https://anentrypoint.github.io/lanmower/" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="https://avatars.githubusercontent.com/u/657315?v=4" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <span class="brand-name">lanmower</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#featured">Featured</a>
+      <a href="#projects">Projects</a>
+      <a href="#stack">Stack</a>
+      <a href="https://github.com/lanmower" target="_blank" rel="noopener" class="nav-cta">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section id="top" class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1>Distributed systems, multi-agent tooling, P2P.</h1>
+      <p class="lede">
+        I work on agent runtimes and P2P plumbing built on Hyperswarm. Writing
+        JavaScript and TypeScript since 2011. Rust when latency matters, C++
+        when it has to be that close to the hardware. Some of the repos below
+        are working tools, others are experiments.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#featured">Featured projects</a>
+        <a class="btn btn-ghost" href="https://github.com/AnEntrypoint" target="_blank" rel="noopener">github.com/AnEntrypoint</a>
+      </div>
+      <dl class="stats">
+        <div><dt>Public repos</dt><dd id="stat-repos">163</dd></div>
+        <div><dt>Followers</dt><dd id="stat-followers">31</dd></div>
+        <div><dt>Building since</dt><dd id="stat-years">2011</dd></div>
+        <div><dt>Total stars</dt><dd id="stat-stars">0</dd></div>
+      </dl>
+    </div>
+    <div class="hero-avatar">
+      <img src="https://avatars.githubusercontent.com/u/657315?v=4" alt="lanmower avatar" width="200" height="200" />
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <h2 class="section-title">About</h2>
+  <div class="about-grid">
+    <p class="about-text">
+      Two stacks. They overlap. Under
+      <a href="https://github.com/AnEntrypoint" target="_blank" rel="noopener">AnEntrypoint</a>
+      there is a P2P layer built on
+      <a href="https://github.com/holepunchto" target="_blank" rel="noopener">Hyperswarm</a>,
+      and an agent runtime (plugkit, gm, agentgui, the ACP bridges, a pile of
+      Claude and Anthropic glue) that lets coding agents talk to each other
+      across models and wire formats.
+    </p>
+    <p class="about-text">
+      The <strong>rs-*</strong>, <strong>plug*</strong>, and <strong>gm</strong>
+      repos below form a working agent platform. Codebase search, code
+      execution, learning memory, and a state-machine discipline.
+      <strong>agentgui</strong> is the GUI on top. The blockchain and hyper-*
+      work is the same family of problems: distributed consensus without a
+      central authority.
+    </p>
+    <ul class="meta-list">
+      <li><span>Role</span> Independent developer at AnEntrypoint</li>
+      <li><span>Location</span> Internet</li>
+      <li><span>Languages</span> JavaScript, TypeScript, Rust, C++, Python</li>
+      <li><span>Focus</span> AI agents, ACP/MCP, P2P, Hyperswarm, blockchain</li>
+    </ul>
+  </div>
+</section>
+
+<section id="featured" class="section">
+  <h2 class="section-title">Featured</h2>
+  <p class="section-sub">A few I want to point at. The rest are in the grid below.</p>
+  <div id="featured-grid" class="featured-grid"></div>
+</section>
+
+<section id="stack" class="section">
+  <h2 class="section-title">Stack</h2>
+  <div id="lang-bar" class="lang-bar" aria-label="Languages by repository count"></div>
+  <div id="lang-legend" class="lang-legend"></div>
+</section>
+
+<section id="projects" class="section">
+  <h2 class="section-title">All projects</h2>
+  <p class="section-sub"><span id="projects-count">0</span> public repos. Forks and archived ones are filtered out.</p>
+  <div class="filters">
+    <input id="search" type="search" placeholder="Search name or description" aria-label="Search repos" />
+    <select id="lang-filter" aria-label="Filter by language">
+      <option value="">All languages</option>
+    </select>
+    <select id="sort" aria-label="Sort">
+      <option value="stars">Most stars</option>
+      <option value="updated">Recently updated</option>
+      <option value="created">Recently created</option>
+      <option value="name">A to Z</option>
+    </select>
+  </div>
+  <div id="projects-grid" class="projects-grid"></div>
+  <div id="projects-empty" class="empty" hidden>No repositories match.</div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p>
+      Static site. Repo data pulled from
+      <a href="https://api.github.com/orgs/AnEntrypoint/repos" target="_blank" rel="noopener">the AnEntrypoint org</a>
+      at build time. No client-side fetch, no analytics.
+    </p>
+    <p class="footer-meta">
+      &copy; <span id="year"></span> lanmower.
+      <a href="https://github.com/lanmower" target="_blank" rel="noopener">@lanmower</a>,
+      <a href="https://github.com/AnEntrypoint" target="_blank" rel="noopener">AnEntrypoint</a>,
+      <a href="https://github.com/AnEntrypoint/lanmower" target="_blank" rel="noopener">source</a>.
+    </p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
